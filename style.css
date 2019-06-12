@@ -53,6 +53,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+ @import url('https://fonts.googleapis.com/css?family=Bangers|Roboto:300&display=swap');
 
 html {
 	line-height: 1.15; /* 1 */
@@ -404,10 +405,12 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: 'Bangers', cursive;
 }
 
 p {
 	margin-bottom: 1.5em;
+	font-family: 'Roboto', sans-serif;
 }
 
 dfn, cite, em, i {
@@ -491,11 +494,15 @@ ul {
 ol {
 	list-style: decimal;
 }
+ul li, ol li {
+	font-family: 'Roboto', sans-serif;
+}
 
 li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
+	/* font-family: 'Roboto', sans-serif; */
 }
 
 dt {
@@ -833,11 +840,46 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Content
+# Content - Main Page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+#masthead {
+    height: 25rem;
+	background-size: cover!important;
+	display: flex;
+    justify-content: center;
+}
+.site-branding {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.site-title a {
+	color: white;
+	text-decoration: none;
+	font-size: 4rem;
+	font-family: 'Bangers', cursive;
+}
+.site-description {
+	color: white;
+	font-size: 2rem;	
+}
+.site-content {
+	padding: 3rem;
+}
+.entry-title a {
+	color: gray;
+}
+.entry-footer span a {
+	color: black;
+	/* font-weight: bold; */
+}
+.entry-footer span {
+	margin-right: 1rem;
+}
 .sticky {
 	display: block;
 }
@@ -862,6 +904,10 @@ a:hover, a:active {
 	margin: 0 0 1.5em;
 }
 
+.site-footer {
+	background: #f3f3f3;
+    padding: 2rem;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -910,6 +956,7 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+	width: 9%;
 }
 
 /*--------------------------------------------------------------
